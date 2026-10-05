@@ -1,0 +1,124 @@
+input,select,textarea{width:100%;padding:14px 15px;border:1px solid var(--line);border-radius:12px;font:inherit;background:white}
+input:focus,select:focus,textarea:focus{outline:2px solid rgba(180,138,73,.25);border-color:var(--gold)}
+.full{margin-top:20px}
+.booking-summary{display:grid;gap:6px;margin:24px 0;padding:18px;background:#f6f3ee;border-radius:14px;font-size:14px}
+.full-btn{width:100%;font-size:16px}
+.hidden{display:none!important}
+.success-box{padding:10px}
+.success-box p{color:var(--muted);line-height:1.7}
+.admin-page{display:flex;min-height:100vh;background:#f3f3f1}
+.sidebar{width:250px;background:#111;color:white;padding:30px 22px;display:flex;flex-direction:column;gap:14px}
+.admin-label{color:#888;font-size:12px;margin-bottom:20px}
+.sidebar nav{display:grid;gap:8px}
+.nav-btn{border:0;background:transparent;color:#bbb;text-align:left;padding:12px;border-radius:10px;font:inherit;cursor:pointer}
+.nav-btn.active,.nav-btn:hover{background:#242424;color:white}
+.sidebar>a{margin-top:auto;color:#aaa;font-size:14px}
+.admin-main{flex:1;padding:40px;overflow:auto}
+.admin-head{display:flex;justify-content:space-between;align-items:center}
+.admin-head h1{margin:4px 0 0}
+.muted{color:#8a8a86;font-size:13px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:30px 0}
+.stats article,.admin-card{background:white;border:1px solid #e3e3df;border-radius:16px;padding:22px}
+.stats span{display:block;color:#777;font-size:13px;margin-bottom:12px}
+.stats strong{font-size:32px}
+.admin-card-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:15px}
+.table-wrap{overflow:auto}
+table{width:100%;border-collapse:collapse}
+th,td{text-align:left;padding:14px 12px;border-bottom:1px solid #eee;font-size:14px}
+td small{display:block;color:#999;margin-top:4px}
+.status{background:#e9f6ee;color:#2b7a45;padding:5px 9px;border-radius:999px;font-size:12px}
+.empty{text-align:center;color:#999;padding:40px}
+@media(max-width:1100px){.hero-grid{grid-template-columns:1fr}.hero-media{justify-content:flex-start}.cards{grid-template-columns:1fr 1fr}.gallery{grid-template-columns:1fr 1fr}.gallery-card:first-child{grid-column:span 2}}
+@media(max-width:900px){.barbers{grid-template-columns:1fr}.gallery{grid-template-columns:1fr}.gallery-card:first-child{grid-column:auto}.topbar nav{display:none;position:absolute;top:70px;right:5vw;background:#151515;padding:20px;border-radius:14px;flex-direction:column;align-items:flex-start}.topbar nav.open{display:flex}.menu-toggle{display:block}.hero-grid{width:min(100% - 10vw,900px);padding:130px 0 80px}.hero-photo{height:420px}.cta{align-items:flex-start;flex-direction:column}.admin-page{display:block}.sidebar{width:100%;height:auto}.sidebar nav{grid-template-columns:repeat(5,auto);overflow:auto}.sidebar>a{margin-top:10px}.admin-main{padding:24px}.stats{grid-template-columns:1fr 1fr 1fr}footer{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.topbar{padding:20px 5vw}.brand{font-size:14px}.hero{min-height:unset}.hero-grid{width:min(100% - 10vw,600px);padding:110px 0 60px;gap:26px}.hero h1{font-size:50px}.hero p{font-size:17px}.hero-actions{flex-direction:column;align-items:flex-start}.hero-photo{height:350px}.hero-badge{left:14px;bottom:14px;padding:12px 14px;min-width:140px}.hero-badge.alt{right:14px;top:14px}.section{padding:75px 5vw}.section-heading h2,.cta h2{font-size:36px}.cards{grid-template-columns:1fr}.cta{margin:0 5vw 55px;padding:35px}.form-grid{grid-template-columns:1fr}.booking-card{padding:24px}.booking-intro h1{font-size:48px}.stats{grid-template-columns:1fr}.admin-head{align-items:flex-start;gap:20px;flex-direction:column}.admin-main{padding:18px}footer{grid-template-columns:1fr}.footer-links{gap:10px}}
+.booking-trust{display:inline-flex;margin-top:14px;padding:9px 13px;border-radius:999px;background:#fff;border:1px solid var(--line);color:#80612e;font-size:13px;font-weight:700}
+.success-icon{width:54px;height:54px;border-radius:50%;display:grid;place-items:center;background:#e9f6ee;color:#2b7a45;font-size:28px;font-weight:800;margin-bottom:18px}
+.success-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+.btn-ghost-dark{background:transparent;color:#171717;border:1px solid var(--line)}
+.btn-ghost-dark:hover{background:#f6f3ee;box-shadow:none}
+button:disabled,select:disabled{opacity:.6;cursor:not-allowed}
+.admin-view{display:none}.admin-view.active{display:block}.admin-logout{margin-top:8px;background:transparent;border:1px solid #303030;color:#aaa;padding:11px 12px;border-radius:10px;text-align:left;cursor:pointer}.admin-logout:hover{color:#fff;border-color:#555}.admin-card-tools{gap:20px}.compact-select{width:auto;min-width:190px}.status-select{padding:7px 9px;border-radius:9px}.status-confirmada{background:#fff4d9;color:#8c641d}.status-completada{background:#e9f6ee;color:#2b7a45}.status-cancelada{background:#fdecec;color:#a73b3b}.status-no_asistio{background:#efefef;color:#555}.admin-grid-2{display:grid;grid-template-columns:1fr 1fr;gap:18px}.block-form{display:grid;gap:16px}.blocks-list{display:grid;gap:10px}.block-item{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:15px;border:1px solid #eee;border-radius:12px}.block-item div{display:grid;gap:5px}.block-item span{font-size:13px;color:#777}.block-delete{border:0;background:#fdecec;color:#a73b3b;padding:8px 10px;border-radius:9px;cursor:pointer}.owner-login-page{min-height:100vh;background:#ebe7e0;display:grid;place-items:center;padding:24px}.owner-login-shell{width:min(460px,100%)}.owner-login-card{background:#fff;border-radius:24px;padding:34px;box-shadow:0 16px 50px rgba(0,0,0,.08)}.owner-login-brand{color:#111;margin-bottom:30px}.owner-login-card h1{font-family:'Playfair Display',serif;font-size:42px;margin:10px 0}.owner-login-card>p{color:var(--muted);line-height:1.6}.owner-login-card form{display:grid;gap:16px;margin-top:24px}.login-msg{min-height:22px;color:#a73b3b!important;font-size:14px}.owner-back{display:inline-block;margin-top:8px;color:#80612e;font-weight:700;font-size:14px}
+@media(max-width:900px){.admin-grid-2{grid-template-columns:1fr}.admin-card-tools{align-items:flex-start;flex-direction:column}.compact-select{width:100%}}
+.auth-switch{width:100%;margin-top:12px;padding:12px 16px;border:1px solid var(--line);border-radius:999px;background:#fff;color:#80612e;font:inherit;font-weight:700;cursor:pointer}.auth-switch:hover{background:#f7f3ec}.login-msg{min-height:22px;color:#8a5a20;font-size:13px;line-height:1.5}
+.availability-notice{margin:18px 0 0;padding:13px 15px;border-radius:12px;font-size:14px;font-weight:700;line-height:1.5}
+.availability-notice.info{background:#f6f1e8;color:#7b5a28;border:1px solid #e4d5bc}
+.availability-notice.warning{background:#fff3e8;color:#8a4b16;border:1px solid #f1d0b3}
+@media (min-width:381px) and (max-width:600px){
+  .barbers{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+  .barber-card{border-radius:16px}
+  .barber-photo-wrap{height:155px}
+  .barber-info{padding:15px 14px 17px}
+  .barber-tag{font-size:10px;padding:5px 8px;margin-bottom:8px}
+  .barber-card h3{font-size:21px;margin-bottom:6px}
+  .barber-card p{font-size:12px;line-height:1.45;margin-bottom:11px}
+  .barber-card a{font-size:12px;line-height:1.35}
+  .barber-card:last-child:nth-child(odd){grid-column:1/-1}
+  .barber-card:last-child:nth-child(odd) .barber-photo-wrap{height:175px}
+  .gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+  .gallery-card{height:175px;padding:15px;font-size:18px}
+  .gallery-card:first-child{grid-column:auto}
+  .gallery-card:last-child:nth-child(odd){grid-column:1/-1;height:190px}
+}
+@media (max-width:380px){
+  .barber-photo-wrap{height:230px}
+  .gallery-card{height:210px}
+}
+@media (min-width:381px) and (max-width:600px){
+  .cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+  .service-card{min-height:0;padding:18px 15px;border-radius:16px}
+  .service-top{gap:8px;margin-bottom:12px;align-items:flex-start}
+  .service-price{font-size:22px;white-space:nowrap}
+  .service-chip{font-size:10px;padding:5px 8px;white-space:nowrap}
+  .service-index{font-size:10px;margin-bottom:6px}
+  .service-card h3{font-size:19px;line-height:1.15;margin:6px 0 10px}
+  .service-card p{font-size:12px;line-height:1.45;margin-bottom:12px}
+  .service-card small{font-size:11px;line-height:1.4}
+}
+.mobile-only{display:none}
+.admin-mobile-top{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.admin-menu-toggle{display:none;border:0;background:transparent;color:#fff;font-size:25px;line-height:1;cursor:pointer;padding:8px}
+.admin-menu-body{display:flex;flex:1;flex-direction:column;gap:14px}
+.reservation-cards{display:grid;gap:12px}
+.reservation-mobile-card{background:#fff;border:1px solid #e7e3dc;border-radius:14px;padding:15px;display:grid;gap:14px}
+.reservation-mobile-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+.reservation-mobile-head>div{min-width:0}
+.reservation-mobile-head strong{display:block;font-size:16px;overflow-wrap:anywhere}
+.reservation-mobile-head small{display:block;color:#8a8a86;margin-top:4px;overflow-wrap:anywhere}
+.reservation-mobile-main{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.reservation-mobile-main span{display:grid;gap:3px;font-size:14px}
+.reservation-mobile-main b{font-size:11px;color:#8a8a86;text-transform:uppercase;letter-spacing:.06em}
+.reservation-note{margin:0;padding-top:10px;border-top:1px solid #eee;color:#666;font-size:13px;line-height:1.5;overflow-wrap:anywhere}
+.mobile-status-select{min-width:120px;max-width:140px}
+@media(max-width:600px){
+  .admin-page{display:block}
+  .sidebar{width:100%;padding:14px 18px;gap:0;position:sticky;top:0;z-index:50}
+  .admin-mobile-top{min-height:48px}
+  .admin-mobile-top .brand{font-size:14px}
+  .admin-menu-toggle{display:block}
+  .admin-menu-body{display:none;padding-top:12px}
+  .sidebar.menu-open .admin-menu-body{display:flex}
+  .sidebar .admin-label{margin:0 0 4px}
+  .sidebar nav{display:grid;grid-template-columns:1fr;gap:6px;overflow:visible}
+  .sidebar>a{margin-top:4px}
+  .admin-logout{width:100%}
+  .admin-main{padding:16px}
+  .admin-head{flex-direction:row;align-items:flex-end;gap:12px;margin-bottom:4px}
+  .admin-head h1{font-size:30px}
+  .admin-head .btn{flex:0 0 auto}
+  .stats{grid-template-columns:1fr;gap:10px}
+  .stats article{padding:18px}
+  .admin-card{padding:16px}
+  .admin-card-head{gap:10px}
+  .admin-card-head h2{font-size:22px}
+  .desktop-table{display:none}
+  .mobile-only{display:grid}
+  .reservation-mobile-main{grid-template-columns:1fr 1fr}
+  .admin-card-tools{align-items:stretch}
+  .compact-select{width:100%;min-width:0}
+  .admin-grid-2{grid-template-columns:1fr}
+}
+@media(max-width:380px){
+  .reservation-mobile-main{grid-template-columns:1fr}
+  .reservation-mobile-head{flex-direction:column}
+  .mobile-status-select{max-width:none;width:100%}
+}
