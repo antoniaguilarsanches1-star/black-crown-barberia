@@ -245,14 +245,16 @@ async function cargarHorarios() {
 
   const labelEstado = {
     ocupado: ' — Ocupado',
-    bloqueado: ' — No disponible',
-    pasado: ' — Ya pasó'
+    bloqueado: ' — No disponible'
   };
 
-  const disponibles = slots.filter(x => x.estado === 'disponible').length;
+  // En reservas no mostramos horas que ya pasaron.
+  // Las horas futuras ocupadas o bloqueadas sí permanecen visibles, pero deshabilitadas.
+  const slotsVisibles = slots.filter(x => x.estado !== 'pasado');
+  const disponibles = slotsVisibles.filter(x => x.estado === 'disponible').length;
 
   time.innerHTML = '<option value="">Selecciona</option>' +
-    slots.map(x => {
+    slotsVisibles.map(x => {
       const disponible = x.estado === 'disponible';
       const value = disponible ? formatTime24(x.hora) : '';
       const disabled = disponible ? '' : ' disabled';
