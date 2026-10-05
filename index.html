@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Barbería moderna con reservas online." />
+  <title>Black Crown Barbería</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#inicio">
+      <span class="brand-mark" aria-hidden="true">♛</span>
+      <span>BLACK CROWN</span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
+    <nav id="mainNav">
+      <a href="#inicio">Inicio</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#barberos">Barberos</a>
+      <a href="#galeria">Galería</a>
+      <a class="btn btn-small" href="reservar.html">Reservar</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-overlay"></div>
+      <div class="hero-grid">
+        <div class="hero-content">
+          <span class="eyebrow">BARBERÍA · ESTILO · PRECISIÓN</span>
+          <h1>Tu estilo empieza con un buen corte.</h1>
+          <p>Reserva tu cita en segundos y evita esperas. Cortes, barba y cuidado personal en un solo lugar.</p>
+          <div class="hero-actions">
+            <a class="btn" href="reservar.html">Reservar cita</a>
+            <a class="btn btn-ghost" href="#servicios">Ver servicios</a>
+          </div>
+          <div class="hero-points">
+            <span>Reserva online</span>
+            <span>Atención puntual</span>
+            <span>Ambiente premium</span>
+          </div>
+        </div>
+
+        <div class="hero-media">
+          <div class="hero-photo">
+            <div class="hero-badge">
+              <strong>+300</strong>
+              <span>Clientes atendidos</span>
+            </div>
+            <div class="hero-badge alt">
+              <strong>Lun–Sáb</strong>
+              <span>9:00 a. m. – 8:00 p. m.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="servicios">
+      <div class="section-heading">
+        <span class="eyebrow dark">NUESTROS SERVICIOS</span>
+        <h2>Lo esencial, bien hecho.</h2>
+        <p>Precios claros y atención sin complicaciones.</p>
+      </div>
+      <div class="cards" id="servicesGrid"></div>
+    </section>
+
+    <section class="section section-dark" id="barberos">
+      <div class="section-heading light">
+        <span class="eyebrow">EL EQUIPO</span>
+        <h2>Elige a tu barbero.</h2>
+        <p>Cada profesional tiene su propio estilo y especialidad.</p>
+      </div>
+      <div class="barbers" id="barbersGrid"></div>
+    </section>
+
+    <section class="section" id="galeria">
+      <div class="section-heading">
+        <span class="eyebrow dark">GALERÍA</span>
+        <h2>Trabajo que habla por sí solo.</h2>
+        <p>Cortes limpios, acabados precisos y resultados que se notan.</p>
+      </div>
+      <div class="gallery">
+        <article class="gallery-card">
+          <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=1000&q=80" alt="Corte fade" />
+          <span>Fade</span>
+        </article>
+        <article class="gallery-card">
+          <img src="https://images.unsplash.com/photo-1517832606299-7ae9b720a186?auto=format&fit=crop&w=1000&q=80" alt="Arreglo de barba" />
+          <span>Barba</span>
+        </article>
+        <article class="gallery-card">
+          <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1000&q=80" alt="Corte clásico" />
+          <span>Clásico</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div>
+        <span class="eyebrow">¿LISTO?</span>
+        <h2>Reserva tu próximo corte.</h2>
+        <p>Elige servicio, barbero y horario en menos de 1 minuto.</p>
+      </div>
+      <a class="btn btn-light" href="reservar.html">Reservar ahora</a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-col">
+      <strong>Black Crown Barbería</strong>
+      <p>Barbería moderna con reservas rápidas y atención personalizada.</p>
+    </div>
+    <div class="footer-col">
+      <strong>Contacto</strong>
+      <p>Horario: Lun–Sáb · 9:00 a. m. – 8:00 p. m.</p>
+      <p>WhatsApp: +51 999 999 999</p>
+      <p>Av. Principal 245 · Jaén</p>
+    </div>
+    <div class="footer-col footer-links">
+      <a href="reservar.html">Reservas</a>
+      <a href="https://wa.me/51999999999" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="https://instagram.com/blackcrownbarberia" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
