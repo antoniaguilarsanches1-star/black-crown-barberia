@@ -23,12 +23,18 @@
         <button class="nav-btn" data-view="reservas">Reservas</button>
         <button class="nav-btn" data-view="bloqueos">Bloqueos</button>
       </nav>
-      <a href="../index.html">← Ver sitio</a>
+      <a class="admin-site-link" href="../index.html">← Ver sitio</a>
       <button class="admin-logout" id="logoutBtn">Cerrar sesión</button>
     </div>
   </aside>
 
   <main class="admin-main">
+    <nav class="mobile-admin-tabs" aria-label="Secciones del panel">
+      <button class="nav-btn active" data-view="resumen">Resumen</button>
+      <button class="nav-btn" data-view="reservas">Reservas</button>
+      <button class="nav-btn" data-view="bloqueos">Bloqueos</button>
+    </nav>
+
     <div class="admin-head">
       <div><span class="muted" id="todayLabel">Hoy</span><h1 id="viewTitle">Resumen</h1></div>
       <button class="btn btn-small" id="refreshBtn">Actualizar</button>
