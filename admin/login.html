@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Acceso del dueño | Black Crown</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body class="owner-login-page">
+  <main class="owner-login-shell">
+    <section class="owner-login-card">
+      <a class="brand owner-login-brand" href="../index.html"><span class="brand-mark">♛</span><span>BLACK CROWN</span></a>
+      <span class="eyebrow dark">ACCESO PRIVADO</span>
+      <h1>Panel del dueño</h1>
+      <p id="authLead">Ingresa con el usuario administrador de la barbería.</p>
+      <form id="ownerLoginForm">
+        <label>Usuario
+          <input id="ownerUser" type="text" autocomplete="username" required value="admin" />
+        </label>
+        <label>Contraseña
+          <input id="ownerPassword" type="password" autocomplete="current-password" required minlength="6" placeholder="••••••••" />
+        </label>
+        <button class="btn full-btn" id="authSubmit" type="submit">Ingresar</button>
+        
+      </form>
+      <p class="login-msg" id="loginMsg"></p>
+      <a class="owner-back" href="../index.html">← Volver al sitio</a>
+    </section>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="../js/supabase-config.js"></script>
+  <script src="../js/admin-login.js"></script>
+</body>
+</html>
