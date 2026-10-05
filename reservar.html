@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reservar cita | Black Crown</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="booking-page">
+  <header class="topbar solid">
+    <a class="brand" href="index.html">BLACK CROWN</a>
+    <nav><a href="index.html">Volver al inicio</a></nav>
+  </header>
+
+  <main class="booking-shell">
+    <section class="booking-intro">
+      <span class="eyebrow dark">RESERVAS ONLINE</span>
+      <h1>Agenda tu cita</h1>
+      <p>Elige servicio, barbero, fecha y hora. No necesitas crear una cuenta.</p><div class="booking-trust">Reserva en menos de 1 minuto · Sin crear cuenta</div>
+    </section>
+
+    <section class="booking-card">
+      <form id="bookingForm">
+        <div class="form-grid">
+          <label>Servicio
+            <select id="service" required></select>
+          </label>
+          <label>Fecha
+            <input type="date" id="date" required />
+          </label>
+          <label>Barbero
+            <select id="barber" required disabled>
+              <option value="">Primero elige una fecha</option>
+            </select>
+          </label>
+          <label>Hora
+            <select id="time" required disabled>
+              <option value="">Selecciona servicio, fecha y barbero</option>
+            </select>
+          </label>
+          <label>Nombre
+            <input type="text" id="name" maxlength="60" placeholder="Tu nombre" required />
+          </label>
+          <label>Celular / WhatsApp
+            <input type="tel" id="phone" maxlength="15" placeholder="999 999 999" required />
+          </label>
+        </div>
+        <div id="availabilityNotice" class="availability-notice hidden"></div>
+        <label class="full">Nota opcional
+          <textarea id="note" rows="3" maxlength="250" placeholder="Ej.: quiero un fade bajo"></textarea>
+        </label>
+        <div class="booking-summary" id="bookingSummary"><span class="muted">Completa los datos para ver el resumen de tu cita.</span></div>
+        <button class="btn full-btn" type="submit">Confirmar reserva</button>
+      </form>
+      <div class="success-box hidden" id="successBox"></div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase-config.js"></script>
+  <script src="js/reservas.js"></script>
+</body>
+</html>
