@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Panel del dueño | Black Crown</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body class="admin-page">
+  <aside class="sidebar" id="adminSidebar">
+    <div class="admin-mobile-top">
+      <div class="brand"><span class="brand-mark">♛</span><span>BLACK CROWN</span></div>
+      <button class="admin-menu-toggle" id="adminMenuToggle" aria-label="Abrir menú">☰</button>
+    </div>
+    <div class="admin-menu-body" id="adminMenuBody">
+      <span class="admin-label">Panel del dueño</span>
+      <nav>
+        <button class="nav-btn active" data-view="resumen">Resumen</button>
+        <button class="nav-btn" data-view="reservas">Reservas</button>
+        <button class="nav-btn" data-view="bloqueos">Bloqueos</button>
+      </nav>
+      <a href="../index.html">← Ver sitio</a>
+      <button class="admin-logout" id="logoutBtn">Cerrar sesión</button>
+    </div>
+  </aside>
+
+  <main class="admin-main">
+    <div class="admin-head">
+      <div><span class="muted" id="todayLabel">Hoy</span><h1 id="viewTitle">Resumen</h1></div>
+      <button class="btn btn-small" id="refreshBtn">Actualizar</button>
+    </div>
+
+    <section id="view-resumen" class="admin-view active">
+      <div class="stats">
+        <article><span>Citas de hoy</span><strong id="statToday">0</strong></article>
+        <article><span>Próximas citas</span><strong id="statUpcoming">0</strong></article>
+        <article><span>Ingresos de hoy</span><strong id="statRevenue">S/ 0</strong></article>
+      </div>
+      <section class="admin-card">
+        <div class="admin-card-head"><h2>Próximas reservas</h2><span class="muted">Datos en tiempo real</span></div>
+        <div class="table-wrap desktop-table">
+          <table>
+            <thead><tr><th>Cliente</th><th>Servicio</th><th>Barbero</th><th>Fecha</th><th>Hora</th><th>Precio</th><th>Estado</th></tr></thead>
+            <tbody id="summaryBody"></tbody>
+          </table>
+        </div>
+        <div id="summaryCards" class="reservation-cards mobile-only"></div>
+      </section>
+    </section>
+
+    <section id="view-reservas" class="admin-view">
+      <section class="admin-card">
+        <div class="admin-card-head admin-card-tools">
+          <div><h2>Todas las reservas</h2><span class="muted">Cambia el estado directamente desde aquí.</span></div>
+          <select id="statusFilter" class="compact-select">
+            <option value="">Todos los estados</option>
+            <option value="confirmada">Confirmadas</option>
+            <option value="completada">Completadas</option>
+            <option value="cancelada">Canceladas</option>
+            <option value="no_asistio">No asistió</option>
+          </select>
+        </div>
+        <div class="table-wrap desktop-table">
+          <table>
+            <thead><tr><th>Cliente</th><th>Servicio</th><th>Barbero</th><th>Fecha</th><th>Hora</th><th>Precio</th><th>Estado</th></tr></thead>
+            <tbody id="reservationsBody"></tbody>
+          </table>
+        </div>
+        <div id="reservationCards" class="reservation-cards mobile-only"></div>
+      </section>
+    </section>
+
+    <section id="view-bloqueos" class="admin-view">
+      <div class="admin-grid-2">
+        <section class="admin-card">
+          <div class="admin-card-head"><div><h2>Bloquear horario</h2><span class="muted">Bloquea un día completo o un rango horario.</span></div></div>
+          <form id="blockForm" class="block-form">
+            <label>Barbero<select id="blockBarber" required></select></label>
+            <label>Fecha<input id="blockDate" type="date" required /></label>
+            <label><span>Tipo</span><select id="blockType"><option value="day">Día completo</option><option value="range">Rango horario</option></select></label>
+            <div id="blockRange" class="form-grid hidden">
+              <label>Desde<select id="blockStart"></select></label>
+              <label>Hasta<select id="blockEnd"></select></label>
+            </div>
+            <label>Motivo<input id="blockReason" type="text" maxlength="100" placeholder="Ej.: descanso, mantenimiento" /></label>
+            <button class="btn" type="submit">Crear bloqueo</button>
+          </form>
+        </section>
+
+        <section class="admin-card">
+          <div class="admin-card-head"><div><h2>Bloqueos activos</h2><span class="muted">Puedes eliminarlos cuando quieras.</span></div></div>
+          <div id="blocksList" class="blocks-list"></div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="../js/supabase-config.js"></script>
+  <script src="../js/admin.js"></script>
+</body>
+</html>
