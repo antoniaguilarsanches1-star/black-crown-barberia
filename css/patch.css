@@ -133,7 +133,12 @@ button:disabled,select:disabled{opacity:.6;cursor:not-allowed}
 }
 @media(max-width:600px){
   .sidebar .admin-menu-body nav{display:none}
-  .sidebar .admin-site-link{display:none}
+  .sidebar .admin-site-link{
+    display:block;
+    margin:6px 0 8px;
+    color:#d6d6d6;
+    font-size:14px;
+  }
   .sidebar .admin-label{margin-bottom:8px}
   .sidebar .admin-logout{margin-top:0}
 
