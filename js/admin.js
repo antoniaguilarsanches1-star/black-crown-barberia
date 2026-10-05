@@ -68,7 +68,8 @@ function renderStats(){
   const upcoming = reservas.filter(r=>r.fecha>=today && r.estado==='confirmada');
   document.getElementById('statToday').textContent = todays.length;
   document.getElementById('statUpcoming').textContent = upcoming.length;
-  document.getElementById('statRevenue').textContent = fmtMoney(todays.reduce((a,r)=>a+Number(r.precio),0));
+  const completedToday = reservas.filter(r=>r.fecha===today && r.estado==='completada');
+  document.getElementById('statRevenue').textContent = fmtMoney(completedToday.reduce((a,r)=>a+Number(r.precio),0));
   document.getElementById('todayLabel').textContent = new Date().toLocaleDateString('es-PE',{weekday:'long',day:'numeric',month:'long'});
 }
 
