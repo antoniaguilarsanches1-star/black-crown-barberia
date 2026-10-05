@@ -122,3 +122,43 @@ button:disabled,select:disabled{opacity:.6;cursor:not-allowed}
   .reservation-mobile-head{flex-direction:column}
   .mobile-status-select{max-width:none;width:100%}
 }
+
+/* Navegación final del panel */
+.mobile-admin-tabs{display:none}
+@media(min-width:601px){
+  .sidebar{min-height:100vh}
+  .admin-menu-body{min-height:0}
+  .sidebar .admin-site-link{margin-top:auto;margin-bottom:22px}
+  .sidebar .admin-logout{margin-top:0}
+}
+@media(max-width:600px){
+  .sidebar .admin-menu-body nav{display:none}
+  .sidebar .admin-site-link{display:none}
+  .sidebar .admin-label{margin-bottom:8px}
+  .sidebar .admin-logout{margin-top:0}
+
+  .mobile-admin-tabs{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:8px;
+    margin:0 0 18px;
+    padding:8px;
+    background:#fff;
+    border:1px solid #e3e3df;
+    border-radius:14px;
+  }
+  .mobile-admin-tabs .nav-btn{
+    text-align:center;
+    color:#666;
+    padding:10px 8px;
+    border-radius:10px;
+    font-size:13px;
+    font-weight:700;
+  }
+  .mobile-admin-tabs .nav-btn.active{
+    background:#171717;
+    color:#fff;
+  }
+  .mobile-admin-tabs .nav-btn:hover{background:#f1eee8;color:#171717}
+  .mobile-admin-tabs .nav-btn.active:hover{background:#171717;color:#fff}
+}
