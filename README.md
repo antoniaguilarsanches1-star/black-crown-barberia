@@ -1,19 +1,16 @@
-# Black Crown Barbería — Prototipo inicial
+# Black Crown Barbería
 
-Primera versión funcional del sitio de barbería.
+Sitio responsive de barbería con reservas online y panel privado del dueño.
 
-## Incluye
+## Funciones
 - Página pública responsive.
-- Servicios y precios.
-- Barberos.
-- Formulario de reserva sin registro.
-- Bloqueo de horario duplicado por barbero en la demo.
-- Panel básico del dueño con reservas, total e ingresos estimados.
-- Datos separados con `negocioId` para facilitar una futura versión multinegocio.
+- Servicios, precios y barberos.
+- Reservas sin crear cuenta.
+- Disponibilidad en tiempo real con Supabase.
+- Horarios ocupados y bloqueados visibles.
+- Bloqueos por día completo o rango horario.
+- Panel del dueño con resumen, reservas, estados e ingresos.
+- Diseño adaptado a escritorio y móvil.
 
-## Probar
-1. Abrir `index.html`.
-2. Entrar a `Reservar` y crear una cita.
-3. Abrir `admin/index.html` para verla en el panel.
-
-La demo guarda reservas con `localStorage`. El siguiente paso es reemplazarlo por Supabase: negocios, servicios, barberos, horarios, reservas, bloqueos y autenticación del dueño.
+## Backend
+Supabase gestiona servicios, barberos, horarios, bloqueos, reservas y autenticación del dueño.
