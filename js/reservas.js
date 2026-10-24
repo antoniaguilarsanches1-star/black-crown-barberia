@@ -13,6 +13,15 @@ const summary = document.getElementById('bookingSummary');
 const successBox = document.getElementById('successBox');
 const availabilityNotice = document.getElementById('availabilityNotice');
 const submitBtn = form.querySelector('button[type="submit"]');
+const soloLetras = value => value.replace(/[^A-Za-zÁÉÍÓÚÜÑáéíóúüñ ]/g, '');
+nameInput.addEventListener('input', () => {
+  const limpio = soloLetras(nameInput.value);
+  if (nameInput.value !== limpio) nameInput.value = limpio;
+});
+phone.addEventListener('input', () => {
+  const limpio = phone.value.replace(/[^0-9]/g, '').slice(0, 9);
+  if (phone.value !== limpio) phone.value = limpio;
+});
 
 let servicios = [];
 let barberos = [];
@@ -289,7 +298,7 @@ form.addEventListener('submit', async (e) => {
   const b = getSelectedBarber();
   const cleanPhone = phone.value.replace(/\D/g, '');
 
-  if (!s || !b || !date.value || !time.value || !nameInput.value.trim() || cleanPhone.length < 9) {
+  if (!s || !b || !date.value || !time.value || !/^[A-Za-zÁÉÍÓÚÜÑáéíóúüñ ]{2,60}$/.test(nameInput.value.trim()) || !/^9[0-9]{8}$/.test(cleanPhone)) {
     alert('Completa correctamente todos los datos obligatorios.');
     return;
   }
